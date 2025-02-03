@@ -16,8 +16,9 @@ public class Main {
     }
 
     public static int findMissingNumber(int[] numbers) {
-        Arrays.sort(numbers);
         int length = numbers.length;
+
+        Arrays.sort(numbers);
         for (int i = 0; i < length; i++) {
             if (i < length - 1) {
                 if (numbers[i + 1] - numbers[i] > 1) {
@@ -25,6 +26,7 @@ public class Main {
                 }
             }
         }
+
         return -1;
     }
 }
